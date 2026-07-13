@@ -103,7 +103,39 @@ console.log(oo)
 
 
 // loops and call back
+// loops and call back
+// loops and call back
 
+// q1
+let colors = ["Red", "Green", "Blue"];
+colors.forEach(function colors(c) {
+    console.log(c)
+    
+})
+// q2
+let numbers = [2, 4, 6, 8];
+numbers.forEach(function numb1(n) {
+    console.log("NUmber:",n)
+    
+})
+
+// q3
+let fruits = ["Apple", "Banana", "Orange"];
+fruits.forEach(function fr(fruits,f){
+    console.log(f,fruits)
+})
+
+
+function greet2(name) {
+    console.log(name);
+}
+
+["Ali", "Ahmed"].forEach(greet2);
+
+
+function im() {
+console.log("hellow")    
+}
 
 
 

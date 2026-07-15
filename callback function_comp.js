@@ -137,6 +137,64 @@ function im() {
 console.log("hellow")    
 }
 
+// more Exercise
+function  greet3(){
+    console.log("hello")
+}
+function meet(call){
+    call()
+    console.log("how are you")
+}
+meet(greet3)
+
+function  showname(){
+    return "mohsin"
+}
+function myname(calback){
+let t=calback()
+
+return "my name is"+t 
+    // console.log("my name is")+calback()
+}
+let yyy=myname(showname)
+console.log(yyy)
+
+
+
+// Level 2 – Different Operations
+// Exercise 4
+
+// Use the same calculate() function.
+
+// Create callbacks for
+
+// Addition
+// Subtraction
+// Multiplication
+// Division
+
+function adding(a,b){
+    return a+b
+}
+
+function subing(a,b){
+    return a-b
+}
+function divi(a,b){
+    return a/b
+}
+function muli(a,b){
+    return a*b
+}
+function operation9(calling,a,b){
+    
+   let r = calling(a,b)
+    console.log(r)
+}
+let tu=operation9(subbing,9,7)
+ tu=operation9(adding,9,7)
+ tu=operation9(muli,9,7)
+ tu=operation9(divi,9,7)
 
 
 

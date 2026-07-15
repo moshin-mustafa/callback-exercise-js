@@ -136,6 +136,24 @@ function greet2(name) {
 function im() {
 console.log("hellow")    
 }
+//  session of js woth cALL BACKS
+function first(callback){
+    console.log("First");
+
+    callback(function(){
+
+        console.log("Second");
+
+    });
+}
+
+function second(callback){
+    console.log("Inside second");
+
+    callback();
+}
+
+first(second);
 
 // more Exercise
 function  greet3(){
@@ -195,7 +213,6 @@ let tu=operation9(subbing,9,7)
  tu=operation9(adding,9,7)
  tu=operation9(muli,9,7)
  tu=operation9(divi,9,7)
-
 
 
 

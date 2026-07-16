@@ -215,6 +215,16 @@ let tu=operation9(subbing,9,7)
  tu=operation9(divi,9,7)
 
 
+function ope99(){
+    console.log(" heelo im mohsin") 
+}
+function krk(calL){
+    calL()
+    calL()
+    calL()
+
+}
+krk(ope99)
 
 
 

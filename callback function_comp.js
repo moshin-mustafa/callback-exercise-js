@@ -227,6 +227,17 @@ function krk(calL){
 krk(ope99)
 
 
+function display(value) {
+    console.log(value);
+}
+
+function processArray(arr, callback) {
+    arr.forEach(value => {
+        callback(value);
+    });
+}
+
+processArray([2, 4, 6, 8], display);
 
 
 

@@ -513,3 +513,108 @@ execute(greet);
  Important questons
  Q1:how will i know where to put the function so js call it and how will i know which function shhould i call
                                     
+
+
+
+You can use the following explanation in your GitHub README.
+
+---
+
+## Callback Function Example
+
+### Code
+
+```javascript
+function display(value) {
+    console.log(value);
+}
+
+function processArray(arr, callback) {
+    arr.forEach(value => {
+        callback(value);
+    });
+}
+
+processArray([2, 4, 6, 8], display);
+```
+
+## Explanation
+
+This program demonstrates the use of **callback functions** in JavaScript.
+
+### `display(value)`
+
+```javascript
+function display(value) {
+    console.log(value);
+}
+```
+
+* This function accepts one parameter named `value`.
+* It simply prints the received value to the console.
+* It will be used as the callback function.
+
+### `processArray(arr, callback)`
+
+```javascript
+function processArray(arr, callback) {
+    arr.forEach(value => {
+        callback(value);
+    });
+}
+```
+
+* `arr` is the array to process.
+* `callback` is a function passed as an argument.
+* `forEach()` loops through every element of the array.
+* During each iteration, the current element is stored in `value`.
+* `callback(value)` calls the callback function and passes the current element to it.
+
+### Function Call
+
+```javascript
+processArray([2, 4, 6, 8], display);
+```
+
+Here:
+
+* `[2, 4, 6, 8]` is passed as the array.
+* `display` is passed as the callback function (notice there are **no parentheses** because we are passing the function itself, not calling it).
+
+Execution happens like this:
+
+1. `processArray()` receives the array and the `display` function.
+2. `forEach()` starts looping through the array.
+3. For each element, `display(value)` is executed.
+4. `display()` prints the value to the console.
+
+### Output
+
+```text
+2
+4
+6
+8
+```
+
+## Flow of Execution
+
+```
+processArray([2,4,6,8], display)
+              │
+              ▼
+        forEach() loops
+              │
+    ┌─────────┼─────────┐
+    ▼         ▼         ▼
+ display(2) display(4) display(6) display(8)
+    │         │         │         │
+    ▼         ▼         ▼         ▼
+ console    console   console   console
+  prints      prints    prints    prints
+   2           4         6         8
+```
+
+### Key Concept
+
+A **callback function** is a function passed as an argument to another function. The receiving function decides **when** and **how many times** to execute the callback. In this example, `processArray()` calls the `display()` callback once for every element in the array.

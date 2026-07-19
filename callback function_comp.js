@@ -240,7 +240,21 @@ function processArray(arr, callback) {
 processArray([2, 4, 6, 8], display);
 
 
+function dis2(arr) {
+    console.log(arr*5)
+}
+function  mainn2(arr,callback){
 
+    
+    arr.forEach(function(element){
+        callback(element)
+
+    })
+    
+    
+
+}
+mainn2([2,4,6,8],dis2)
 
 /// //// code with harry  part
 // console.log("i am mohsin")

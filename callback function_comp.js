@@ -256,6 +256,63 @@ function  mainn2(arr,callback){
 }
 mainn2([2,4,6,8],dis2)
 
+
+
+// Exercise 9
+
+// Print only even numbers.
+
+// Input
+
+// [3,6,7,8,10]
+
+// Output
+
+// 6
+// 8
+// 10
+function main33(arr){
+    if(arr%2==0){
+        console.log(arr)
+    }
+}
+ function iner(arr,callback){
+ arr.forEach(element => {
+    callback(element)
+});
+
+ }
+iner([2,3,5,7,8],main33)
+
+
+
+// Exercise 9
+
+// Print only even numbers.
+
+// Input
+
+// [3,6,7,8,10]
+
+// Output
+
+// 6
+// 8
+// 10
+function main33(arr){
+    if(arr%2==0){
+        console.log(arr)
+    }
+}
+ function iner(arr,callback){
+ arr.forEach(element => {
+    callback(element)
+});
+
+ }
+iner([2,3,5,7,8],main33)
+
+
 /// //// code with harry  part
 // console.log("i am mohsin")
 // console.log("i am mustafa")

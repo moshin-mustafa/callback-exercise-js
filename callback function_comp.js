@@ -313,6 +313,29 @@ function main33(arr){
 iner([2,3,5,7,8],main33)
 
 
+// to find the maximun number in the array using callback
+let max=0
+    function main32(arr){
+        // max++
+        // console.log(max,"thisis for max")
+        
+        if(arr>max){
+            
+            max=arr
+        
+            
+            console.log(max)
+        }
+    
+
+    }
+ function iner2(arr,callback){
+ arr.forEach(element => {
+    callback(element)
+});
+
+ }
+iner2([2,3,8,4,7],main32)
 /// //// code with harry  part
 // console.log("i am mohsin")
 // console.log("i am mustafa")

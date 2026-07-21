@@ -618,3 +618,110 @@ processArray([2,4,6,8], display)
 ### Key Concept
 
 A **callback function** is a function passed as an argument to another function. The receiving function decides **when** and **how many times** to execute the callback. In this example, `processArray()` calls the `display()` callback once for every element in the array.
+
+
+
+
+
+
+Overview
+
+This program demonstrates how to use a callback function to find the largest number in an array.
+
+Instead of writing the comparison logic directly inside the loop, the program passes a callback function (main32) to another function (iner2). The callback is executed for every element in the array.
+
+Function Explanation
+Global Variable
+let max = 0;
+Stores the largest number found so far.
+Initially set to 0.
+Updated whenever a larger value is encountered.
+main32(arr)
+function main32(arr) {
+    if (arr > max) {
+        max = arr;
+        console.log(max);
+    }
+}
+Purpose
+
+Compares the current array element with the current maximum value.
+
+How it Works
+Receives one element from the array.
+Checks if the element is greater than max.
+If true:
+Updates max.
+Prints the new maximum value.
+Example
+
+If max = 3 and the current element is 8:
+
+8 > 3   // true
+
+Then:
+
+max = 8;
+console.log(8);
+iner2(arr, callback)
+function iner2(arr, callback) {
+    arr.forEach(element => {
+        callback(element);
+    });
+}
+Purpose
+
+Loops through every element of the array and executes the callback function.
+
+Parameters
+arr → The array to process.
+callback → A function that will be executed for each element.
+How it Works
+forEach() iterates through the array.
+Each element is stored in element.
+callback(element) calls main32() with the current element.
+Function Call
+iner2([2, 3, 8, 4, 7], main32);
+What Happens?
+The array [2, 3, 8, 4, 7] is passed to iner2().
+main32 is passed as the callback function.
+forEach() visits each element.
+main32() compares every element with max.
+Whenever a larger number is found, max is updated and printed.
+Execution Trace
+Current Element	Current Max	Condition (element > max)	New Max	Output
+2	0	✅ True	2	2
+3	2	✅ True	3	3
+8	3	✅ True	8	8
+4	8	❌ False	8	-
+7	8	❌ False	8	-
+Output
+2
+3
+8
+
+The final largest number stored in max is:
+
+8
+Flow of Execution
+iner2([2,3,8,4,7], main32)
+              │
+              ▼
+        forEach() loops
+              │
+    ┌─────────┼─────────┬─────────┬─────────┐
+    ▼         ▼         ▼         ▼         ▼
+ main32(2) main32(3) main32(8) main32(4) main32(7)
+    │         │         │         │         │
+    ▼         ▼         ▼         ▼         ▼
+ max=2     max=3     max=8    no change  no change
+    │         │         │
+    ▼         ▼         ▼
+ print 2   print 3   print 8
+Key Concepts
+Callback Function: main32 is passed as an argument and executed for every array element.
+Higher-Order Function: iner2 accepts another function (main32) as a parameter.
+forEach(): Iterates through each element of the array.
+Global Variable: max keeps track of the largest value found during iteration.
+
+This example demonstrates how callback functions can separate iteration logic (iner2) from processing logic (main32), making the code more modular and reusable.

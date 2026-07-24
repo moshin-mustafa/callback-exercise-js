@@ -398,6 +398,39 @@ callback(reversed)
 rs("hello",string2)
 
 
+
+
+
+// Exercise 13
+
+// Count characters using a callback.
+
+// Input
+
+// JavaScript
+
+// Output
+
+// 10
+
+function display(text) {
+console.log(text)
+
+}
+
+function countCharacters(text, callback) {
+
+    // count characters
+    let count =0
+     for(let i=0; i<text.length;i++){
+        count++
+     }
+callback(count)
+    // call callback
+}
+
+countCharacters("JavaScript", display);
+
 // Exercise 13
 
 // Count characters using a callback.

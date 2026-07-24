@@ -370,6 +370,46 @@ function modify(text,callbcak) {
 }
     modify("hello",string)
 
+/ Exercise 12
+
+// Reverse a string using a callback.
+
+// Input
+
+// apple
+
+// Output
+
+// elppa
+
+function string2(text) {
+    console.log(text)
+}
+function rs(text,callback) {
+    let reversed=""
+      for (let i = text.length - 1; i >= 0; i--) {
+        reversed += text[i];
+        // console.log(reverse)
+          
+    }
+callback(reversed)
+  
+}
+rs("hello",string2)
+
+
+// Exercise 13
+
+// Count characters using a callback.
+
+// Input
+
+// JavaScript
+
+// Output
+
+// 10
+
 
 /// //// code with harry  part
 // console.log("i am mohsin")

@@ -336,6 +336,41 @@ let max=0
 
  }
 iner2([2,3,8,4,7],main32)
+
+
+
+
+// Exercise 11
+
+// Create
+
+// modify(text, callback)
+
+// Callbacks:
+
+// uppercase
+// lowercase
+
+// Example
+
+// Input
+
+// Hello
+
+// Output
+
+// HELLO
+function string(text){
+    console.log(text)
+}
+function modify(text,callbcak) {
+   console.log(text.toUpperCase());
+   callbcak(text)
+
+}
+    modify("hello",string)
+
+
 /// //// code with harry  part
 // console.log("i am mohsin")
 // console.log("i am mustafa")

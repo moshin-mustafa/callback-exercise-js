@@ -725,3 +725,160 @@ forEach(): Iterates through each element of the array.
 Global Variable: max keeps track of the largest value found during iteration.
 
 This example demonstrates how callback functions can separate iteration logic (iner2) from processing logic (main32), making the code more modular and reusable.
+
+
+
+
+
+# JavaScript Callback Function Exercises
+
+This repository contains beginner-friendly examples demonstrating how **callback functions** work in JavaScript. Each exercise separates the main processing logic from the action performed on the result by passing a callback function.
+
+---
+
+# Exercise 11 – Convert Text to Uppercase
+
+### Objective
+
+Create a function that converts a string to uppercase and passes the result to a callback function.
+
+### How it Works
+
+* `modify()` receives a string and a callback function.
+* It converts the string to uppercase using `toUpperCase()`.
+* The callback function is then called with the original text.
+
+### Example
+
+**Input**
+
+```text
+hello
+```
+
+**Output**
+
+```text
+HELLO
+hello
+```
+
+### Concepts Learned
+
+* Callback functions
+* Function parameters
+* `toUpperCase()`
+* Passing data to a callback
+
+---
+
+# Exercise 12 – Reverse a String
+
+### Objective
+
+Reverse a string using a callback function.
+
+### How it Works
+
+* `rs()` loops through the string from the last character to the first.
+* A new reversed string is created.
+* After the loop finishes, the reversed string is passed to the callback.
+* The callback prints the reversed string.
+
+### Example
+
+**Input**
+
+```text
+hello
+```
+
+**Output**
+
+```text
+olleh
+```
+
+### Concepts Learned
+
+* `for` loop
+* String indexing
+* Building a new string
+* Callback functions
+
+---
+
+# Exercise 13 – Count Characters
+
+### Objective
+
+Count the number of characters in a string using a callback function.
+
+### How it Works
+
+* `countCharacters()` receives a string and a callback.
+* A loop counts each character in the string.
+* The final count is passed to the callback.
+* The callback displays the total number of characters.
+
+### Example
+
+**Input**
+
+```text
+JavaScript
+```
+
+**Output**
+
+```text
+10
+```
+
+### Concepts Learned
+
+* String length
+* Looping through strings
+* Counting values
+* Callback functions
+
+---
+
+# Callback Flow
+
+```
+Input
+   │
+   ▼
+Main Function
+   │
+Processes the data
+   │
+   ▼
+Callback Function
+   │
+Displays or uses the result
+```
+
+---
+
+# Key Concepts
+
+* **Callback Function** – A function passed as an argument to another function.
+* **Higher-Order Function** – A function that accepts another function as a parameter.
+* **Code Reusability** – The same processing function can work with different callback functions.
+* **Separation of Responsibilities** – The main function performs the processing, while the callback decides what to do with the result.
+
+---
+
+# Skills Practiced
+
+* Writing callback functions
+* Passing functions as arguments
+* String manipulation
+* Using loops
+* Function composition
+* JavaScript fundamentals
+
+These exercises provide a strong foundation for understanding callbacks, which are widely used in JavaScript for event handling, array methods, timers (`setTimeout`, `setInterval`), and asynchronous programming.
+

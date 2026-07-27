@@ -481,6 +481,45 @@ first1(function () {
     
 })
 
+// Exercise 17
+// Create
+
+// login(username, password, success, failure)
+
+// If username is
+
+// admin
+
+// and password is
+
+// 1234
+
+// call success().
+
+// Otherwise call failure().
+
+
+function login(username,password,success,failure) {
+    if (username=="admin"&& password==1234)
+    {
+        console.log("sucess")
+            success()
+
+    }
+else{
+ console.log ("failure")
+ failure()
+}
+    
+}
+
+ login("admin",1233,function () {
+      console.log("Login sucessful!");
+ } ,function(){
+    console.log("Login failed!");
+
+ })
+    
 
 /// //// code with harry  part
 // console.log("i am mohsin")

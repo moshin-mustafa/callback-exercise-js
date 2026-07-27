@@ -443,6 +443,44 @@ countCharacters("JavaScript", display);
 
 // 10
 
+// Exercise 16
+
+// Create three callbacks.
+
+// The first callback calls the second.
+
+// The second calls the third.
+
+// Expected Output
+
+// Step 1
+// Step 2
+// Step 3
+
+function first1(callback) {
+    console.log("step1")
+    callback()
+    
+}
+function first2(callback) {
+    console.log("step2")
+    callback()
+    
+}
+function first3() {
+    console.log("step3")
+    
+    
+}
+
+first1(function () {
+    first2(function () {
+        first3()
+        
+    })
+    
+})
+
 
 /// //// code with harry  part
 // console.log("i am mohsin")

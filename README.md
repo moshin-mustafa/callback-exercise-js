@@ -882,3 +882,8 @@ Displays or uses the result
 
 These exercises provide a strong foundation for understanding callbacks, which are widely used in JavaScript for event handling, array methods, timers (`setTimeout`, `setInterval`), and asynchronous programming.
 
+
+# Login System Using Callback Functions
+
+This project demonstrates the basics of **callback functions** in JavaScript by implementing a simple login system. The `login()` function validates a username and password, then executes either a **success callback** or a **failure callback** based on the authentication result. This example helps beginners understand how functions can be passed as arguments and executed later, laying the foundation for concepts such as event handling, asynchronous programming, and nested callbacks in JavaScript.
+

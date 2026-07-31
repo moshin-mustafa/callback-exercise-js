@@ -605,6 +605,49 @@ Promise.resolve("Ali")
     console.log(name);
 });
 
+Tricky Promise Exercise ⭐⭐⭐
+
+Rules:
+
+// Use new Promise().
+// Use setTimeout().
+// Use at least 4 .then() calls.
+// Use one .catch().
+// Do not use async/await.
+// Requirements
+// Create a Promise.
+// After 1 second, resolve with:
+// 10
+// In the first .then():
+// Print the value.
+// Return the value multiplied by 3.
+// In the second .then():
+// Print the value.
+// Do not return anything. (This is the trick.)
+// In the third .then():
+// Print the value you receive.
+// Return 50.
+// In the fourth .then():
+// Print the value.
+// Add a .catch() at the end.
+let o = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(10)
+    }, 1000);
+})
+.then((x)=>{
+console.log(x)
+return x*3
+}).then((x)=>{
+    console.log(x)
+}).then((x)=>{
+    console.log(x)
+    return 50
+}).then((x)=>{
+    console.log(x)
+}).catch((x)=>{
+    console.log(x)
+})
 
 /// //// code with harry  part
 // console.log("i am mohsin")

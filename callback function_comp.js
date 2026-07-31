@@ -519,7 +519,30 @@ else{
     console.log("Login failed!");
 
  })
-    
+// learning promies day 1
+// program 1
+     console.log("i am at the first")
+ let prom1= new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let y =7
+        if (y>6.1){
+
+            resolve("my name is mohisn")
+        }
+        else{
+            reject(" i cant not pass")
+        }
+    }, 1000);
+    console.log("i am new promise")
+ })
+prom1.then((t)=>{
+
+    console.log(t)
+})
+prom1.catch((r)=>{
+    console.log(r)
+})
+
 
 /// //// code with harry  part
 // console.log("i am mohsin")

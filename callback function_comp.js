@@ -543,6 +543,44 @@ prom1.catch((r)=>{
     console.log(r)
 })
 
+//promise chaining
+ console.log("i am at the first")
+ let prom1= new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let y =7
+        if (y>6.1){
+
+            resolve("my name is mohisn")
+            // console.log(resolve)
+        }
+        else{
+            reject(" i cant not pass")
+        }
+    }, 1000);
+    console.log("i am new promise")
+ })
+prom1.then((t)=>{
+console.log(t)
+return t+"I am a bsit student"
+
+ 
+    // return t+"I am a bsit student"
+    
+    
+})
+.then((t)=>{
+
+    console.log(t)
+     return t+"at 4 sem"
+    //  return t+"at 4 sem"
+})
+.then((t)=>{
+    console.log(t)
+})
+.catch((r)=>{
+    console.log(r)
+})
+
 
 /// //// code with harry  part
 // console.log("i am mohsin")

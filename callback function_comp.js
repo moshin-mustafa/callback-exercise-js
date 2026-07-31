@@ -581,6 +581,30 @@ return t+"I am a bsit student"
     console.log(r)
 })
 
+let p = new Promise((resolve, reject) => {
+    resolve("JavaScript");
+});
+
+p.then((data) => {
+    console.log(data);
+});
+
+Promise.resolve(5)
+.then((x) => {
+    return x + 2;
+})
+.then((x) => {
+    console.log(x);
+});
+
+Promise.resolve("Ali")
+.then((name) => {
+    name + " Ahmed";
+})
+.then((name) => {
+    console.log(name);
+});
+
 
 /// //// code with harry  part
 // console.log("i am mohsin")
